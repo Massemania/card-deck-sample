@@ -16,6 +16,12 @@ namespace CardDeckSample.Specs
             deck = Deck.CreateFullDeck();
         }
 
+        [When(@"the deck is sorted")]
+        public void WhenTheDeckIsSorted()
+        {
+            deck.SortAscending();
+        }
+
         [Then(@"the deck should have (.*) cards")]
         public void ThenTheDeckShouldHaveCards(int totalCards)
         {
@@ -55,5 +61,20 @@ namespace CardDeckSample.Specs
             }
             Assert.AreEqual(52, uniqueCards.Count);
         }
+
+        [Then(@"the cards are in ascending order")]
+        public void ThenTheCardsAreInAscendingOrder()
+        {
+            Card currentCard = null;
+            foreach (var card in deck.Cards)
+            {
+                if (currentCard != null)
+                {
+                    Assert.IsTrue(card.CompareTo(currentCard) > 0);
+                }
+                currentCard = card;
+            }
+        }
+
     }
 }

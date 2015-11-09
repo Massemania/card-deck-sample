@@ -6,3 +6,8 @@ Scenario: Deck setup
 	And the deck should have 4 suits
 	And the deck should have 13 card numbers
 	And the deck should not have duplicate cards
+
+Scenario: Deck sorting
+	Given An unshuffled deck
+	When the deck is sorted
+	Then the cards are in ascending order

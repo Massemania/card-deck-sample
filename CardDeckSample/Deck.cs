@@ -24,5 +24,10 @@ namespace CardDeckSample
             }
             return deck;
         }
+
+        public void SortAscending()
+        {
+            Cards.Sort();
+        }
     }
 }
