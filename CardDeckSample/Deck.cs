@@ -5,6 +5,9 @@ namespace CardDeckSample
 {
     public class Deck
     {
+        /// <summary>
+        /// Contains 52 cards (4 suits with 13 cards each)
+        /// </summary>
         public List<Card> Cards { get; private set; }
 
         private Deck()

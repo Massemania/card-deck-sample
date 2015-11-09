@@ -10,6 +10,9 @@ namespace CardDeckSample
     {
         static void Main(string[] args)
         {
+            // A deck could be created using Deck.CreateFullDeck() and shuffled,
+            // sorted, etc...  The list of cards is exposed as a property.  A 'deal'
+            // method could be added.
         }
     }
 }

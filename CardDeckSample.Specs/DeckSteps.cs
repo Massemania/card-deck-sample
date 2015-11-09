@@ -4,6 +4,9 @@ using TechTalk.SpecFlow;
 
 namespace CardDeckSample.Specs
 {
+    /// <summary>
+    /// BDD Cucumber-style tests.  These methods correspond to the contents of Deck.feature.
+    /// </summary>
     [Binding]
     public class DeckSteps
     {
