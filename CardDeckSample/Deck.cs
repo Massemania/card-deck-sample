@@ -13,6 +13,10 @@ namespace CardDeckSample
             Cards = new List<Card>();
         }
 
+        /// <summary>
+        /// Creates the deck of cards, from Ace to King by suit.
+        /// </summary>
+        /// <returns>The initialized deck of cards</returns>
         public static Deck CreateFullDeck()
         {
             Deck deck = new Deck();
