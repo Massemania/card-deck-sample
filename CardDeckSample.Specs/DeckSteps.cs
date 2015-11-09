@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+using System;
 using TechTalk.SpecFlow;
 
 namespace CardDeckSample.Specs
@@ -11,13 +12,13 @@ namespace CardDeckSample.Specs
         [Given(@"An unshuffled deck")]
         public void GivenAnUnshuffledDeck()
         {
-            Deck = new Deck();
+            Deck = Deck.CreateFullDeck();
         }
         
         [Then(@"the deck should have (.*) cards")]
         public void ThenTheDeckShouldHaveCards(int totalCards)
         {
-            ScenarioContext.Current.Pending();
+            Assert.AreEqual(52, Deck.Cards.Count);
         }
         
         [Then(@"the deck should have (.*) cards in (.*) suits")]

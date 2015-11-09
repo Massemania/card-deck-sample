@@ -8,7 +8,13 @@ namespace CardDeckSample
 {
     public class Card
     {
-        public int Number { get; set; }
-        public Suit Suit { get; set; }
+        public CardNumber Number { get; private set; }
+        public Suit Suit { get; private set; }
+
+        public Card(CardNumber number, Suit suit)
+        {
+            Number = number;
+            Suit = suit;
+        }
     }
 }
