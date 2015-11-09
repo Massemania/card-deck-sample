@@ -73,8 +73,10 @@ this.ScenarioSetup(scenarioInfo);
 #line 5
  testRunner.Then("the deck should have 52 cards", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 6
- testRunner.And("the deck should have 13 cards in 4 suits", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("the deck should have 4 suits", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 7
+ testRunner.And("the deck should have 13 card numbers", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 8
  testRunner.And("the deck should not have duplicate cards", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();
