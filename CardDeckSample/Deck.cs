@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 namespace CardDeckSample
 {
@@ -28,6 +29,26 @@ namespace CardDeckSample
         public void SortAscending()
         {
             Cards.Sort();
+        }
+
+        /// <summary>
+        /// Shuffle the deck by first making a copy of it and clearing the original deck.  Then,
+        /// we'll randomly grab cards from our copy of the deck and add them to the original.
+        /// </summary>
+        public void Shuffle()
+        {
+            List<Card> cardsToShuffle = new List<Card>(Cards);
+            Cards.Clear();
+            while (cardsToShuffle.Count > 0)
+            {
+                Random random = new Random();
+                var cardIndex = random.Next(cardsToShuffle.Count);
+
+                var cardToShuffle = cardsToShuffle[cardIndex];
+                cardsToShuffle.RemoveAt(cardIndex);
+
+                Cards.Add(cardToShuffle);
+            }
         }
     }
 }

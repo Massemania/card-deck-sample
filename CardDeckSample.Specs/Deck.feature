@@ -11,3 +11,8 @@ Scenario: Deck sorting
 	Given An unshuffled deck
 	When the deck is sorted
 	Then the cards are in ascending order
+
+Scenario: Deck shuffling
+	Given An unshuffled deck
+	When the deck is shuffled
+	Then the deck should have 52 cards

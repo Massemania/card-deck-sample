@@ -1,5 +1,4 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using System;
 using System.Collections.Generic;
 using TechTalk.SpecFlow;
 
@@ -14,6 +13,12 @@ namespace CardDeckSample.Specs
         public void GivenAnUnshuffledDeck()
         {
             deck = Deck.CreateFullDeck();
+        }
+
+        [When(@"the deck is shuffled")]
+        public void WhenTheDeckIsShuffled()
+        {
+            deck.Shuffle();
         }
 
         [When(@"the deck is sorted")]
