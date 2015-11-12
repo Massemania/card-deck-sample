@@ -16,3 +16,4 @@ Scenario: Deck shuffling
 	Given An unshuffled deck
 	When the deck is shuffled
 	Then the deck should have 52 cards
+	And shuffling several decks produces different results

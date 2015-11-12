@@ -5,6 +5,8 @@ namespace CardDeckSample
 {
     public class Deck
     {
+        private static Random random = new Random();
+
         /// <summary>
         /// Contains 52 cards (4 suits with 13 cards each)
         /// </summary>
@@ -48,7 +50,6 @@ namespace CardDeckSample
             Cards.Clear();
             while (cardsToShuffle.Count > 0)
             {
-                Random random = new Random();
                 var cardIndex = random.Next(cardsToShuffle.Count);
 
                 var cardToShuffle = cardsToShuffle[cardIndex];

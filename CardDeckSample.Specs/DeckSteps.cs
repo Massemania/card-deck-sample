@@ -84,5 +84,29 @@ namespace CardDeckSample.Specs
             }
         }
 
+        [Then(@"shuffling several decks produces different results")]
+        public void ThenShufflingSeveralDecksProducesDifferentResults()
+        {
+            var deck1 = Deck.CreateFullDeck();
+            var deck2 = Deck.CreateFullDeck();
+
+            deck1.Shuffle();
+            deck2.Shuffle();
+
+            Assert.IsTrue(AreDecksDifferent(deck1, deck2));
+        }
+
+        private bool AreDecksDifferent(Deck deck1, Deck deck2)
+        {
+            for (int i = 0; i < deck1.Cards.Count; ++i)
+            {
+                if ((deck1.Cards[i].Number != deck2.Cards[i].Number) ||
+                    (deck1.Cards[i].Suit != deck2.Cards[i].Suit))
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
     }
 }

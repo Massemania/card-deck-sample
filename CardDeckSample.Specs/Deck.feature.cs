@@ -110,6 +110,8 @@ this.ScenarioSetup(scenarioInfo);
  testRunner.When("the deck is shuffled", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 18
  testRunner.Then("the deck should have 52 cards", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 19
+ testRunner.And("shuffling several decks produces different results", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();
         }
